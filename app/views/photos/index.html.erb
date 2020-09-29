@@ -1,0 +1,30 @@
+<h1>Photosite </h1>
+
+<% @photo_all.each do |photo| %>
+  <%= image_tag photo.file_name, :size => '500x500' %>
+  <p> Photo created time : <%= photo.date_time %> </p>
+  <table cellpadding="10">
+    <tr>
+      <% @comment = @comment_all.where(:photo_id => photo.id)%>
+      <th> User </th>
+      <th> Comment </th>
+      <th> Comment time </th>
+    </tr>
+    <% if @comment.count !=0 %>
+      <%@comment.each do |comment| %>
+        <tr>
+          <td> <%= link_to comment.user.first_name, controller: 'photos', action: :index, id: comment.user.id%> </td>
+          <td> <%= comment.comment_text %></td>
+          <td> <%= comment.created_at %></td>
+
+        </tr>
+      <% end %>
+    <% else %>
+      <tr>
+        <td> -- </td>
+        <td> -- </td>
+        <td> -- </td>
+      </tr>
+    <%end%>
+  </table>
+<% end %>

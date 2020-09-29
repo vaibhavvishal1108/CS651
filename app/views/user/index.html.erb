@@ -1,0 +1,17 @@
+<h1> PhotoSite User list </h1>
+<h4> There are 6 users </h4>
+<table>
+  <tr>
+    <th>User</th>
+    <th>First</th>
+    <th>Last</th>
+  </tr>
+  <% User.all.each do |user| %>
+    <tr>
+      <td><%= link_to user.id, controller: "photos", action: 'index', id: user.id %></td>
+      <td><%= link_to user.first_name %></td>
+      <td><%= link_to user.last_name %></td>
+    </tr>
+  <% end %>
+
+</table>
