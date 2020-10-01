@@ -196,5 +196,5 @@ In Amazon EC2 the user has to do most of the installation (of ruby, gems, etc.) 
 # **Section 8**
 
 Photosite application using AWS S3 bucket Youtube Demo: https://www.youtube.com/watch?v=a2Qx8WrQzaA
-Photosite application running on EC2 using docker container Youtube Demo: https://youtu.be/N98iYHL_08Y
+Photosite application running on EC2 using docker container Youtube Demo: https://youtu.be/VwuoKZlWm44
 
